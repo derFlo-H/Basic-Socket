@@ -12,6 +12,9 @@ public class Main {
 			DataOutputStream dOut = new DataOutputStream(s.getOutputStream());
 			DataInputStream dIn = new DataInputStream(s.getInputStream());
 			
+			write(dOut, "hi server!");
+			System.out.println(read(dIn));
+			
 			dIn.close();
 			dOut.close();
 			s.close();

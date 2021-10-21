@@ -15,6 +15,9 @@ public class Main {
 			DataInputStream dIn = new DataInputStream(s.getInputStream());
 			DataOutputStream dOut = new DataOutputStream(s.getOutputStream());
 			
+			System.out.println(read(dIn));
+			write(dOut, "hi client!");
+			
 			dOut.close();
 			dIn.close();
 			s.close();
